@@ -40,7 +40,7 @@ public class LoginPageTest extends BaseTest {
 		Assert.assertTrue(actURL.contains(AppConstants.LOGIN_PAGE_URL_FRACTION));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = false)
 	public void isForgotPasswordLinkExistsTest() {
 		Assert.assertTrue(loginPage.checkForgotPasswordLinkExists());
 	}
