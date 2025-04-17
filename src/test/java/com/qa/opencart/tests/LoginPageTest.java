@@ -50,8 +50,4 @@ public class LoginPageTest extends BaseTest {
 		accountsPage =  loginPage.doLogin("sahil987@yopmail.com", "Sahil@123");
 		Assert.assertEquals(accountsPage.getAccountPageTitle(), AppConstants.ACCOUNT_PAGE_TITLE);
 	}
-	
-	@Test(priority = 5)
-	public void naveentest() {
-		Assert.assertEquals(false, true);	}
 }
