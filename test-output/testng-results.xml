@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-17T13:30:50 IST" name="Default suite" finished-at="2025-04-17T13:30:55 IST" duration-ms="4922">
+  <suite started-at="2025-04-17T13:41:35 IST" name="Opencart App Test Regression Suite" finished-at="2025-04-17T13:41:40 IST" duration-ms="5017">
     <groups>
     </groups>
-    <test started-at="2025-04-17T13:30:50 IST" name="Default test" finished-at="2025-04-17T13:30:55 IST" duration-ms="4922">
+    <test started-at="2025-04-17T13:41:35 IST" name="Login Page Test" finished-at="2025-04-17T13:41:40 IST" duration-ms="5017">
       <class name="com.qa.opencart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:50 IST" name="setup" finished-at="2025-04-17T13:30:54 IST" duration-ms="3975" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:35 IST" name="setup" finished-at="2025-04-17T13:41:39 IST" duration-ms="3560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginPageTitleTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:54 IST" name="loginPageTitleTest" finished-at="2025-04-17T13:30:54 IST" duration-ms="41" status="PASS">
+        <test-method signature="loginPageTitleTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:39 IST" name="loginPageTitleTest" finished-at="2025-04-17T13:41:39 IST" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method signature="loginPageURLTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:54 IST" name="loginPageURLTest" finished-at="2025-04-17T13:30:54 IST" duration-ms="10" status="PASS">
+        <test-method signature="loginPageURLTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:39 IST" name="loginPageURLTest" finished-at="2025-04-17T13:41:39 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageURLTest -->
-        <test-method signature="isForgotPasswordLinkExistsTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:54 IST" name="isForgotPasswordLinkExistsTest" finished-at="2025-04-17T13:30:54 IST" duration-ms="30" status="PASS">
+        <test-method signature="isForgotPasswordLinkExistsTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:39 IST" name="isForgotPasswordLinkExistsTest" finished-at="2025-04-17T13:41:39 IST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isForgotPasswordLinkExistsTest -->
-        <test-method signature="loginTest()[pri:4, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:54 IST" name="loginTest" finished-at="2025-04-17T13:30:55 IST" duration-ms="700" status="PASS">
+        <test-method signature="loginTest()[pri:4, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:39 IST" name="loginTest" finished-at="2025-04-17T13:41:40 IST" duration-ms="1193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@c1fca2a]" started-at="2025-04-17T13:30:55 IST" name="tearDown" finished-at="2025-04-17T13:30:55 IST" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@49fb0bbd]" started-at="2025-04-17T13:41:40 IST" name="tearDown" finished-at="2025-04-17T13:41:40 IST" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Login Page Test -->
+  </suite> <!-- Opencart App Test Regression Suite -->
 </testng-results>
