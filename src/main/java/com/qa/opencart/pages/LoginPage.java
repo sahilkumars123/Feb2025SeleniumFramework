@@ -2,6 +2,8 @@ package com.qa.opencart.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Select;
 
 import com.qa.opencart.constants.AppConstants;
 import com.qa.opencart.utils.ElementUtil;
@@ -15,6 +17,7 @@ public class LoginPage {
 	private By pwd = By.id("input-password");
 	private By forgotPasswordLink = By.linkText("Forgotten Password");
 	private By loginBtn = By.xpath("//input[@type='submit']");
+	private By registerLink = By.cssSelector("div.list-group a[href$='register']");
 	
 	public LoginPage(WebDriver driver) {	
 		this.driver = driver;
@@ -43,5 +46,10 @@ public class LoginPage {
 		eleUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 		//return eleUtil.waitForTitleIs(AppConstants.ACCOUNT_PAGE_TITLE, 5);
+	}
+	
+	public RegisterPage doRegister() {
+		eleUtil.waitForElementVisible(registerLink, AppConstants.MEDIUM_TIME_OUT).click();
+		return new RegisterPage(driver);	
 	}
 }

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT" verbose="4">
+<suite thread-count="4" parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT" verbose="4">
   <listeners>
-    <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Login Page Test(failed)" verbose="4">
+  <test thread-count="4" parallel="tests" name="Accounts Page Test(failed)" verbose="4">
     <classes>
-      <class name="com.qa.opencart.tests.LoginPageTest">
+      <class name="com.qa.opencart.tests.AccountsPageTest">
         <methods>
+          <include name="accSetup"/>
           <include name="setup"/>
-          <include name="naveentest"/>
+          <include name="accPageHeadersTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
+      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
     </classes>
-  </test> <!-- Login Page Test(failed) -->
+  </test> <!-- Accounts Page Test(failed) -->
 </suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

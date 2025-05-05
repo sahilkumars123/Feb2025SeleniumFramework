@@ -15,6 +15,11 @@ public class OptionsManager {
 	private FirefoxOptions fo;
 	private EdgeOptions eo;
 
+	//Why we have used constructor here ?
+	//Ans:: Because we will not rewrite the code to load the properties file, we have already written it in a Base test
+	//we just need to used the prop refrence over here. So we thought to create a constructor over here.
+	
+	//we need prop reference over here because headless, incognito values need to get it from properties file
 	public OptionsManager(Properties prop) {
 		this.prop = prop;
 	}
@@ -23,7 +28,7 @@ public class OptionsManager {
 		co = new ChromeOptions();
 		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
 			System.out.println("....Running in headless.....");
-			co.addArguments("--headless");
+			co.addArguments("--headless=new");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			co.addArguments("--incognito");

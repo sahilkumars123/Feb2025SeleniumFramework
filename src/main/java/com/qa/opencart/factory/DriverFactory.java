@@ -26,17 +26,30 @@ import io.qameta.allure.Step;
 
 /**
  * 
- * @author naveenautomationlabs
+ * @author sahil
  *
  */
 public class DriverFactory {
+	
+	
+	//3 methods - initDriver, initProp, takeScreenshot
+	//initDriver is used to launch a browser and return driver instance
+	//initProp is used to intialize the config.properties file and then return the prop instance
+	//takeScreenshot - is to take a screenshot
+	//DriverFactory says that if you need to have more options like ChromeOptions where you can handle headless, highlight,incognito better to create a new class OptionsManager...I am not responsible for it
+	
 
-	static WebDriver driver;
+	//we are not mentioning as static, because it will hamper the parallel execution as it will supply
+	WebDriver driver;
+	
 	Properties prop;
 
 	public static String isHighlight;
 
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+	//ThreadLocal Driver has 2 methods, set and get method
+	//set method is used to set the driver
+	//get method is used to get the driver
 
 	OptionsManager optionsManager;
 
@@ -47,48 +60,73 @@ public class DriverFactory {
 	 * @return it returns driver
 	 */
 	@Step("initializing the driver with properties: {0}")
-	public WebDriver initDriver() {
+	public WebDriver initDriver(Properties prop) {
+		
+		String browserName = prop.getProperty("browser"); //getProperty method is used to get the property name
+		String url = prop.getProperty("url");
+		isHighlight= prop.getProperty("isHighlight");
+		optionsManager = new OptionsManager(prop);//this optionsmanager also needs the prop instance coming from BaseTest, so we created a object over here.
 
-		String browserName = "chrome";
 		System.out.println("browser name is : " + browserName);
-
-		//isHighlight = prop.getProperty("highlight");
-
-		//optionsManager = new OptionsManager(prop);
 
 		switch (browserName.toLowerCase().trim()) {
 		case "chrome":
-				// run tcs in local:
-				//tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
-			driver = new ChromeDriver();
-			driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+			//driver = new ChromeDriver(optionsManager.getChromeOptions());
+			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 			break;
 		case "firefox":
-				// run tcs in local:
-				tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
 			break;
 		case "edge":
-				// run tcs in local:
-				tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
 			break;
 
 		case "safari":
-			tlDriver.set(new SafariDriver());
+			tlDriver.set(new SafariDriver()); //Safari does not supports headless browser
 			break;
 
 		default:
 			System.out.println(AppError.INVALID_BROWSER_MESG + browserName + " is invalid");
 			throw new BrowserException(AppError.INVALID_BROWSER_MESG);
 		}
+		
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		//driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+		getDriver().get(url);
 
-//		getDriver().manage().window().maximize();
-//		getDriver().manage().deleteAllCookies();
-//		getDriver().get(prop.getProperty("url"));
-
-		//return getDriver();
-
-		return driver;
+		return getDriver();
 	}
+	
+	/**
+	 * this method is returning the driver with threadlocal driver
+	 * 
+	 * @return
+	 */
+	public static WebDriver getDriver() {
+		return tlDriver.get();
+	}
+	
+//	/**
+//	 * this will make a connection with config.properties file 
+//	 * @return the prop instance through which we will access the properties.
+//	 */
+//	public Properties initProp() {
+//		
+//		prop = new Properties(); // this is java inbuilt class coming from java.util package
+//		try {
+//			//it will make the connection with config.properties file
+//			FileInputStream ip = new FileInputStream("./resources/config/config.properties");
+//			prop.load(ip);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		return prop;
+//	}
+	
+	
 
 //	private void init_remoteDriver(String browserName) {
 //		System.out.println("running tests on grid with browser : " + browserName);
@@ -119,18 +157,7 @@ public class DriverFactory {
 //
 //	}
 
-	/**
-	 * this method is returning the driver with threadlocal
-	 * 
-	 * @return
-	 */
-//	public static WebDriver getDriver() {
-//		return tlDriver.get();
-//	}
-	
-	public static WebDriver getDriver() {
-		return driver;
-	}
+
 
 	/**
 	 * this method is used to init the properties from the config file
@@ -140,57 +167,57 @@ public class DriverFactory {
 
 	// mvn clean install -Denv="qa"
 
-//	public Properties initProp() {
-//		prop = new Properties();
-//		FileInputStream ip = null;
-//
-//		String envName = System.getProperty("env");
-//		System.out.println("running tests on env: " + envName);
-//
-//		try {
-//			if (envName == null) {
-//				System.out.println("env is null....hence running tests on QA env");
-//				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
-//			} else {
-//				switch (envName.toLowerCase().trim()) {
-//				case "qa":
-//					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
-//					break;
-//				case "dev":
-//					ip = new FileInputStream("./src/test/resources/config/dev.config.properties");
-//					break;
-//				case "stage":
-//					ip = new FileInputStream("./src/test/resources/config/stage.config.properties");
-//					break;
-//				case "uat":
-//					ip = new FileInputStream("./src/test/resources/config/uat.config.properties");
-//					break;
-//				case "prod":
-//					ip = new FileInputStream("./src/test/resources/config/config.properties");
-//					break;
-//
-//				default:
-//					System.out.println("plz pass the right env name..." + envName);
-//					throw new FrameworkException("INVALID ENV NAME");
-//				}
-//			}
-//
-//			prop.load(ip);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return prop;
-//	}
+	public Properties initProp() {
+		prop = new Properties();
+		FileInputStream ip = null;
+
+		String envName = System.getProperty("env");
+		System.out.println("running tests on env: " + envName);
+
+		try {
+			if (envName == null) {
+				System.out.println("env is null....hence running tests on QA env");
+				ip = new FileInputStream("./resources/config/config.properties");
+			} else {
+				switch (envName.toLowerCase().trim()) {
+				case "qa":
+					ip = new FileInputStream("./resources/config/qa.config.properties");
+					break;
+				case "dev":
+					ip = new FileInputStream("./resources/config/dev.config.properties");
+					break;
+				case "stage":
+					ip = new FileInputStream("./resources/config/stage.config.properties");
+					break; 
+				case "uat":
+					ip = new FileInputStream("./resources/config/uat.config.properties");
+					break;
+				case "prod":
+					ip = new FileInputStream("./resources/config/config.properties");
+					break;
+
+				default:
+					System.out.println("plz pass the right env name..." + envName);
+					throw new FrameworkException("INVALID ENV NAME");
+				}
+			}
+
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prop;
+	}
 
 	/**
 	 * take screenshot
 	 */
 
 	public static String getScreenshot(String methodName) {
-		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);// temp dir
+		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);// temp dir
 		String path = System.getProperty("user.dir") + "/screenshot/" + methodName + "_" + System.currentTimeMillis()
 				+ ".png";
 		// converting string "path" to a file object

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="23.391" tests="19" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/test-classes:/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/classes:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/sahilkumar/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/sahilkumar/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/sahilkumar/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/sahilkumar/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/sahilkumar/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/sahilkumar/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/sahilkumar/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/sahilkumar/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/testng/testng/7.7.0/testng-7.7.0.jar:/Users/sahilkumar/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/sahilkumar/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/sahilkumar/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi/3.9/poi-3.9.jar:/Users/sahilkumar/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9.jar:/Users/sahilkumar/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/sahilkumar/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.9/poi-ooxml-schemas-3.9.jar:/Users/sahilkumar/.m2/repository/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar:/Users/sahilkumar/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-scratchpad/3.9/poi-scratchpad-3.9.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/ooxml-schemas/1.1/ooxml-schemas-1.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/openxml4j/1.0-beta/openxml4j-1.0-beta.jar:/Users/sahilkumar/.m2/repository/log4j/log4j/1.2.8/log4j-1.2.8.jar:/Users/sahilkumar/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar:/Users/sahilkumar/.m2/repository/io/reactivex/rxjava3/rxjava/3.0.4/rxjava-3.0.4.jar:/Users/sahilkumar/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/sahilkumar/.m2/repository/org/freemarker/freemarker/2.3.30/freemarker-2.3.30.jar:/Users/sahilkumar/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-testng/2.29.0/allure-testng-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-java-commons/2.29.0/allure-java-commons-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-model/2.29.0/allure-model-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-test-filter/2.29.0/allure-test-filter-2.29.0.jar:/Users/sahilkumar/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/Users/sahilkumar/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.4.v20240802-1551/jre/lib"/>
+    <property name="sun.java.command" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/surefire/surefirebooter-20250505101157639_3.jar /Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/surefire 2025-05-05T10-11-57_604-jvmRun1 surefire-20250505101157639_1tmp surefire_0-20250505101157639_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/test-classes:/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/classes:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/sahilkumar/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/sahilkumar/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/sahilkumar/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/sahilkumar/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/sahilkumar/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/sahilkumar/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/sahilkumar/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/sahilkumar/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/sahilkumar/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/sahilkumar/.m2/repository/org/testng/testng/7.7.0/testng-7.7.0.jar:/Users/sahilkumar/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/sahilkumar/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/sahilkumar/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi/3.9/poi-3.9.jar:/Users/sahilkumar/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9.jar:/Users/sahilkumar/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/sahilkumar/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.9/poi-ooxml-schemas-3.9.jar:/Users/sahilkumar/.m2/repository/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar:/Users/sahilkumar/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/poi-scratchpad/3.9/poi-scratchpad-3.9.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/ooxml-schemas/1.1/ooxml-schemas-1.1.jar:/Users/sahilkumar/.m2/repository/org/apache/poi/openxml4j/1.0-beta/openxml4j-1.0-beta.jar:/Users/sahilkumar/.m2/repository/log4j/log4j/1.2.8/log4j-1.2.8.jar:/Users/sahilkumar/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar:/Users/sahilkumar/.m2/repository/io/reactivex/rxjava3/rxjava/3.0.4/rxjava-3.0.4.jar:/Users/sahilkumar/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/sahilkumar/.m2/repository/org/freemarker/freemarker/2.3.30/freemarker-2.3.30.jar:/Users/sahilkumar/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-testng/2.29.0/allure-testng-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-java-commons/2.29.0/allure-java-commons-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-model/2.29.0/allure-model-2.29.0.jar:/Users/sahilkumar/.m2/repository/io/qameta/allure/allure-test-filter/2.29.0/allure-test-filter-2.29.0.jar:/Users/sahilkumar/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/Users/sahilkumar/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/sahilkumar"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_21.0.4.v20240802-1551/jre"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject/target/surefire/surefirebooter-20250505101157639_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.4+7-LTS"/>
+    <property name="user.name" value="sahilkumar"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.3.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.4+7"/>
+    <property name="localRepository" value="/Users/sahilkumar/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/1b/_8pw2bw92f1g9wfpx2l81l8c0000gn/T/"/>
+    <property name="java.version" value="21.0.4"/>
+    <property name="user.dir" value="/Users/sahilkumar/eclipse-workspace/Feb2025SeleniumProject"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/sahilkumar/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.4+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="loginPageTitleTest" classname="com.qa.opencart.tests.LoginPageTest" time="0.196">
+    <system-out><![CDATA[...
+... TestNG 7.7.0 by Cédric Beust (cedric@beust.com)
+...
+
+I am in onStart method Register Page Test
+I am in onStart method Login Page Test
+I am in onStart method Accounts Page Test
+I am in onStart method ProductInfo Page Test
+running tests on env: null
+running tests on env: null
+env is null....hence running tests on QA env
+env is null....hence running tests on QA env
+running tests on env: null
+env is null....hence running tests on QA env
+running tests on env: null
+env is null....hence running tests on QA env
+browser name is : chrome
+browser name is : chrome
+browser name is : chrome
+browser name is : chrome
+App creds are:: sahil987@yopmail.com : Sahil@123
+App creds are:: sahil987@yopmail.com : Sahil@123
+I am in onTestStart method loginPageTitleTest start
+I am in onTestSuccess method loginPageTitleTest succeed
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+May 05, 2025 10:12:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+May 05, 2025 10:12:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+May 05, 2025 10:12:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+May 05, 2025 10:12:02 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+May 05, 2025 10:12:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 05, 2025 10:12:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 05, 2025 10:12:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 05, 2025 10:12:02 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.115. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="loginPageURLTest" classname="com.qa.opencart.tests.LoginPageTest" time="0.001">
+    <system-out><![CDATA[I am in onTestStart method loginPageURLTest start
+Login Page url is:: https://naveenautomationlabs.com/opencart/index.php?route=account/login
+I am in onTestSuccess method loginPageURLTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="isForgotPasswordLinkExistsTest" classname="com.qa.opencart.tests.LoginPageTest" time="0.043">
+    <system-out><![CDATA[I am in onTestStart method isForgotPasswordLinkExistsTest start
+I am in onTestStart method verifyRegisterPageHeader start
+I am in onTestSuccess method isForgotPasswordLinkExistsTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="loginTest" classname="com.qa.opencart.tests.LoginPageTest" time="0.22">
+    <system-out><![CDATA[I am in onTestStart method searchTest start
+I am in onTestSuccess method loginTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRegisterPageHeader" classname="com.qa.opencart.tests.RegisterPageTest" time="0.504">
+    <system-out><![CDATA[I am in onTestStart method loginTest start
+App creds are:: sahil987@yopmail.com : Sahil@123
+I am in onTestSuccess method verifyRegisterPageHeader succeed
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRegisterationDetails[sahil, kumar, 9876778283, sahil@765, yes](1)" classname="com.qa.opencart.tests.RegisterPageTest" time="1.908">
+    <system-out><![CDATA[I am in onFinish method Accounts Page Test
+I am in onTestSuccess method verifyRegisterationDetails succeed
+]]></system-out>
+  </testcase>
+  <testcase name="verifyRegisterationDetails[rahul, kumar, 9876778283, rahul@765, yes](2)" classname="com.qa.opencart.tests.RegisterPageTest" time="3.285">
+    <failure message="stale element reference: stale element not found&#10;  (Session info: chrome=135.0.7049.115)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception&#10;Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.3.1&apos;, java.version: &apos;21.0.4&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b6a6892ee8ffbd86cc322f79b8451069, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.629BDBDEB9861D55A01C56EB58C1F721.d.FC3E5EFCF6652649B69790CC42AA6088.e.151}], script=arguments[0].style.backgroundColor = &apos;rgba(0, 0, 0, 0)&apos;}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /var/folders/1b/_8pw2bw92f1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54962/devtoo..., se:cdpVersion: 135.0.7049.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b6a6892ee8ffbd86cc322f79b8451069" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=135.0.7049.115)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.3.1', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6a6892ee8ffbd86cc322f79b8451069, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.629BDBDEB9861D55A01C56EB58C1F721.d.FC3E5EFCF6652649B69790CC42AA6088.e.151}], script=arguments[0].style.backgroundColor = 'rgba(0, 0, 0, 0)'}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /var/folders/1b/_8pw2bw92f1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54962/devtoo..., se:cdpVersion: 135.0.7049.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6a6892ee8ffbd86cc322f79b8451069
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at com.qa.opencart.utils.JavaScriptUtil.changeColor(JavaScriptUtil.java:97)
+	at com.qa.opencart.utils.JavaScriptUtil.flash(JavaScriptUtil.java:92)
+	at com.qa.opencart.utils.ElementUtil.checkElementHighlight(ElementUtil.java:69)
+	at com.qa.opencart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:352)
+	at com.qa.opencart.pages.RegisterPage.fillRegisterationDetails(RegisterPage.java:59)
+	at com.qa.opencart.tests.RegisterPageTest.verifyRegisterationDetails(RegisterPageTest.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></failure>
+    <system-out><![CDATA[I am in onTestStart method productInfoTest start
+I am in onTestFailure method verifyRegisterationDetails failed
+Screenshot captured for test case:verifyRegisterationDetails
+Total Number of images for product:: MacBook Pro are:: 4
+]]></system-out>
+  </testcase>
+  <testcase name="accPageHeadersTest" classname="com.qa.opencart.tests.AccountsPageTest" time="0.356">
+    <system-out><![CDATA[I am in onTestStart method verifyRegisterationDetails start
+I am in onTestStart method accPageHeadersTest start
+I am in onTestStart method checkProductImagesCount start
+Account Page Headers are:: [My Account, My Orders, My Affiliate Account, Newsletter]
+I am in onTestSuccess method accPageHeadersTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="accountsPageTitleTest" classname="com.qa.opencart.tests.AccountsPageTest" time="0.006">
+    <system-out><![CDATA[I am in onTestStart method accountsPageTitleTest start
+I am in onTestSuccess method accountsPageTitleTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="checkAccountPageHeadersCountTest" classname="com.qa.opencart.tests.AccountsPageTest" time="0.029">
+    <system-out><![CDATA[I am in onTestStart method checkAccountPageHeadersCountTest start
+Total Headers Count:: 4
+I am in onTestSuccess method checkAccountPageHeadersCountTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="checkLogoutLinkExistsTest" classname="com.qa.opencart.tests.AccountsPageTest" time="0.543">
+    <system-out><![CDATA[I am in onTestStart method checkLogoutLinkExistsTest start
+I am in onTestSuccess method checkLogoutLinkExistsTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="searchTest[macbook, 3](1)" classname="com.qa.opencart.tests.AccountsPageTest" time="1.763">
+    <system-out><![CDATA[I am in onFinish method Login Page Test
+I am in onTestSuccess method searchTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="searchTest[imac, 1](2)" classname="com.qa.opencart.tests.AccountsPageTest" time="1.307">
+    <system-out><![CDATA[I am in onTestStart method checkProductImagesCount start
+I am in onTestSuccess method searchTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="searchTest[samsung, 2](3)" classname="com.qa.opencart.tests.AccountsPageTest" time="0.267">
+    <system-out><![CDATA[I am in onTestStart method productHeaderTest start
+I am in onTestSuccess method searchTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="checkProductImagesCount[macbook, MacBook Pro, 4](1)" classname="com.qa.opencart.tests.ProductInfoPageTest" time="0.318">
+    <system-out><![CDATA[I am in onTestStart method searchTest start
+Total Number of images for product:: MacBook Pro are:: 4
+I am in onTestSuccess method checkProductImagesCount succeed
+]]></system-out>
+  </testcase>
+  <testcase name="checkProductImagesCount[imac, iMac, 3](2)" classname="com.qa.opencart.tests.ProductInfoPageTest" time="1.521">
+    <system-out><![CDATA[I am in onTestStart method searchTest start
+Total Number of images for product:: iMac are:: 3
+I am in onTestSuccess method checkProductImagesCount succeed
+]]></system-out>
+  </testcase>
+  <testcase name="productHeaderTest[macbook, MacBook Pro](1)" classname="com.qa.opencart.tests.ProductInfoPageTest" time="0.44">
+    <system-out><![CDATA[I am in onTestStart method verifyRegisterationDetails start
+I am in onTestSuccess method productHeaderTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="productHeaderTest[imac, iMac](2)" classname="com.qa.opencart.tests.ProductInfoPageTest" time="2.464">
+    <system-out><![CDATA[I am in onTestStart method productHeaderTest start
+I am in onTestSuccess method productHeaderTest succeed
+]]></system-out>
+  </testcase>
+  <testcase name="productInfoTest" classname="com.qa.opencart.tests.ProductInfoPageTest" time="3.327">
+    <system-out><![CDATA[{Brand=Apple, Availability=Out Of Stock, productHeader=MacBook Pro, productImagesCount=4, price=$2,000.00, Ex Tax=$2,000.00, Product Code=Product 18, Reward Points=800}
+I am in onTestSuccess method productInfoTest succeed
+]]></system-out>
+  </testcase>
+</testsuite>

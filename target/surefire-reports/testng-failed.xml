@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Opencart App Test Regression Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Register Page Test(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.opencart.tests.RegisterPageTest">
+        <methods>
+          <include name="accSetup"/>
+          <include name="verifyRegisterationDetails" invocation-numbers="1"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.RegisterPageTest -->
+    </classes>
+  </test> <!-- Register Page Test(failed) -->
+</suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

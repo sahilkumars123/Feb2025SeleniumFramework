@@ -47,10 +47,10 @@ public class ElementUtil {
 	}
 
 	@Step("entering value : {1} into locator: {0}")
-	public void doSendKeys(By locator, String value) {
-		getElement(locator).sendKeys(value);
+	public void doSendKeys(By locator, String lastName) {
+		getElement(locator).sendKeys(lastName);
 	}
-	
+
 	public void doSendKeys(WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
@@ -63,17 +63,25 @@ public class ElementUtil {
 	public void doSendKeys(By locator, CharSequence... value) {
 		getElement(locator).sendKeys(value);
 	}
+
+	private void checkElementHighlight(WebElement element) {
+		if(Boolean.parseBoolean(DriverFactory.isHighlight)) {
+			jsUtil.flash(element);
+		}
+	}
+
 	
-	
-//	private void checkElementHighlight(WebElement element) {
-//		if(Boolean.parseBoolean(DriverFactory.isHighlight)) {
-//			jsUtil.flash(element);
-//		}
-//	}
-	
+	//for flashing/highlight property ->
+	/*
+	 * Step 1: we need to check the highlight property is true or flase in config.proeprties file
+	 * Step 2: we need that property to load here ? but ElementUtil has no relation with config properties
+	 * Step 3: So, we made a variable in DriverFactory and used the same variable over here as well.
+	 * Step 4: We made a if condition, if that property is true then flash the element otherwise not.
+	 */
 	public WebElement getElement(By locator) {
 		WebElement element = driver.findElement(locator);
-		//checkElementHighlight(element);
+
+		checkElementHighlight(element);
 		return element;
 	}
 
@@ -322,8 +330,8 @@ public class ElementUtil {
 	 */
 	public WebElement waitForElementPresence(By locator, int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-		WebElement element =  wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-		//checkElementHighlight(element);
+		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		checkElementHighlight(element);
 		return element;
 	}
 
@@ -341,37 +349,32 @@ public class ElementUtil {
 	public WebElement waitForElementVisible(By locator, int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		//checkElementHighlight(element);
+		checkElementHighlight(element);
 		return element;
 	}
 
 	public WebElement waitForElementVisible(By locator, int timeOut, int intervalTime) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut), Duration.ofSeconds(intervalTime));
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		//checkElementHighlight(element);
+		checkElementHighlight(element);
 		return element;
 	}
-	
+
 	/**
 	 * wait for element visible on the page with fluent wait features
+	 * 
 	 * @param locator
 	 * @param timeOut
 	 * @param pollingTime
 	 * @return
 	 */
-	public WebElement waitForElementVisibleWithFluentFeeatures(By locator, int timeOut, int pollingTime) {		
-		Wait<WebDriver> wait =	new FluentWait<WebDriver>(driver)
-									.withTimeout(Duration.ofSeconds(timeOut))
-									.pollingEvery(Duration.ofSeconds(pollingTime))
-									.ignoring(NoSuchElementException.class)
-									.ignoring(StaleElementReferenceException.class)
-									.ignoring(ElementNotInteractableException.class)
-									.withMessage("=====element is not found======" + locator);
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));									
+	public WebElement waitForElementVisibleWithFluentFeeatures(By locator, int timeOut, int pollingTime) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.pollingEvery(Duration.ofSeconds(pollingTime)).ignoring(NoSuchElementException.class)
+				.ignoring(StaleElementReferenceException.class).ignoring(ElementNotInteractableException.class)
+				.withMessage("=====element is not found======" + locator);
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
-	
-	
-	
 
 	/**
 	 * An expectation for checking an element is visible and enabled such that you
@@ -395,14 +398,6 @@ public class ElementUtil {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 	/**
 	 * An expectation for checking that there is at least one element present on a
@@ -500,19 +495,14 @@ public class ElementUtil {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.alertIsPresent());
 	}
-	
-	
+
 	public Alert waitForAlertUsingFluentWaitAndSwitch(int timeOut) {
-		
-		Wait<WebDriver> wait =	new FluentWait<WebDriver>(driver)
-								.withTimeout(Duration.ofSeconds(timeOut))
-								.ignoring(NoAlertPresentException.class)
-								.withMessage("====Js alert is not present===");
+
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeOut))
+				.ignoring(NoAlertPresentException.class).withMessage("====Js alert is not present===");
 		return wait.until(ExpectedConditions.alertIsPresent());
 
 	}
-	
-	
 
 	public String getAlertText(int timeOut) {
 		return waitForAlertAndSwitch(timeOut).getText();

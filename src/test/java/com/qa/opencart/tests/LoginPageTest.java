@@ -19,7 +19,7 @@ import io.qameta.allure.Story;
 @Epic("Epic 100: design open cart login page")
 @Feature("Feature 101: login feature")
 @Story("US 120: All the features related to open cart login page")
-@Owner("Naveen Automation Labs")
+@Owner("Sahil Test")
 @Link(name = "LoginPage", url = "https://naveenautomationlabs.com/opencart/index.php?route=account/login")
 public class LoginPageTest extends BaseTest {
 
@@ -47,7 +47,7 @@ public class LoginPageTest extends BaseTest {
 
 	@Test(priority = 4)
 	public void loginTest() throws InterruptedException {
-		accountsPage =  loginPage.doLogin("sahil987@yopmail.com", "Sahil@123");
+		accountsPage =  loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertEquals(accountsPage.getAccountPageTitle(), AppConstants.ACCOUNT_PAGE_TITLE);
 	}
 }

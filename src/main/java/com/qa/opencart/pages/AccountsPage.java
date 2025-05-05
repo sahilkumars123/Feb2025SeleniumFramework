@@ -17,6 +17,8 @@ public class AccountsPage {
 
 	private By logoutLink = By.linkText("Logout");
 	private By accountHeaders = By.cssSelector("div#content h2");
+	private By search = By.name("search");
+	private By searchIcon = By.cssSelector("div#search button");
 
 	public AccountsPage(WebDriver driver) {
 		this.driver = driver;
@@ -24,17 +26,17 @@ public class AccountsPage {
 	}
 
 	public String getAccountPageTitle() {
-		return eleutil.waitForTitleContainsAndReturn(AppConstants.ACCOUNT_PAGE_TITLE,AppConstants.SHORT_TIME_OUT);
+		return eleutil.getPageTitleIs(AppConstants.ACCOUNT_PAGE_TITLE,AppConstants.SHORT_TIME_OUT);
 	}
 
-	public List<String> getAccountPageHeadings() {
-		List<WebElement> accountPageHeadings = eleutil.waitForElementsVisible(accountHeaders,
-				AppConstants.MEDIUM_TIME_OUT);
+	public List<String> getAccountPageHeaders() {
+		List<WebElement> accountPageHeadings = eleutil.waitForElementsVisible(accountHeaders,AppConstants.MEDIUM_TIME_OUT);
 		List<String> accountPageHeadingsList = new ArrayList<String>();
 		for (WebElement e : accountPageHeadings) {
 			String text = e.getText();
 			accountPageHeadingsList.add(text);
 		}
+		System.out.println("Account Page Headers are:: "+accountPageHeadingsList);
 		return accountPageHeadingsList;
 	}
 
@@ -45,6 +47,14 @@ public class AccountsPage {
 	
 	public boolean isLogoutLinkExsits() {
 			return eleutil.waitForElementPresence(logoutLink,AppConstants.MEDIUM_TIME_OUT).isDisplayed();
+	}
+	
+	public SearchResultsPage doSearch(String searchKey) {
+		WebElement searchField = eleutil.waitForElementVisible(search, AppConstants.MEDIUM_TIME_OUT);
+		searchField.clear();
+		searchField.sendKeys(searchKey);
+		eleutil.doClick(searchIcon);
+		return new SearchResultsPage(driver);
 	}
 
 }
